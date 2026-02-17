@@ -1,0 +1,138 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Pretendard', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #1f295c 0%, #0a0d1f 60%);
+  color: #f3f6ff;
+  overflow: hidden;
+}
+
+.bg-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(35px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.orb-1 {
+  width: 260px;
+  height: 260px;
+  background: #4a5dff;
+  top: 10%;
+  left: 8%;
+}
+
+.orb-2 {
+  width: 340px;
+  height: 340px;
+  background: #8f4dff;
+  right: 6%;
+  bottom: 6%;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 640px);
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(18, 23, 50, 0.82);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.subtitle,
+.hint {
+  margin-top: 0;
+  color: #d1d9ff;
+}
+
+.downloader-form {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  border-radius: 12px;
+  border: 1px solid #4c5bcc;
+  background: #10163d;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.8rem 0.95rem;
+}
+
+.row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+button {
+  border: 0;
+  background: linear-gradient(135deg, #6a70ff, #9766ff);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(130, 104, 255, 0.35);
+}
+
+.messages {
+  margin: 1rem 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.alert {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+}
+
+.alert.success {
+  background: rgba(67, 174, 120, 0.25);
+  border: 1px solid #43ae78;
+}
+
+.alert.error {
+  background: rgba(222, 81, 81, 0.25);
+  border: 1px solid #df5555;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.3rem;
+  }
+}
